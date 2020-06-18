@@ -1,0 +1,78 @@
+<div id="modal" class="modal">
+    <div class="modal__content">
+        <div class="modal__header">
+            <div class="modal__header-top">
+                <i class="modal__ball-icon fas fa-volleyball-ball"></i>
+                <h3 class="modal__header-top-title">Registration</h3>
+                <i id="modal-exit-icon" class="modal__exit-icon far fa-window-close"></i>
+            </div>
+            <div class="modal__header-bottom">
+                <img src="/img/logo2.png" class="modal__logo" alt="Rockville Volleyball Academy Logo">
+                <h3 id="modal-title" class="modal__header-bottom-title"></h3>
+            </div>
+        </div>
+        <div class="modal__main">
+            <h3 class="modal__title">Payment Details</h3>
+
+            <form action="charge.php" method="POST" id="payment-form" class="modal__form">
+                <div class="modal__subtitle">Please fill in billing information:</div>
+                <input
+                type="text"
+                class="modal__input"
+                name="firstname"
+                placeholder="First name"
+                autocomplete="off"
+                required>
+                
+                <input 
+                type="text"
+                class="modal__input"
+                name="lastname"
+                placeholder="Last name"
+                autocomplete="off"
+                required>
+    
+                <input 
+                type="email"
+                class="modal__input"
+                name="email"
+                placeholder="Email address"
+                pattern="[a-z0-9]+([-+._][a-z0-9]+){0,2}@.*?(\.(a(?:[cdefgilmnoqrstuwxz]|ero|(?:rp|si)a)|b(?:[abdefghijmnorstvwyz]iz)|c(?:[acdfghiklmnoruvxyz]|at|o(?:m|op))|d[ejkmoz]|e(?:[ceghrstu]|du)|f[ijkmor]|g(?:[abdefghilmnpqrstuwy]|ov)|h[kmnrtu]|i(?:[delmnoqrst]|n(?:fo|t))|j(?:[emop]|obs)|k[eghimnprwyz]|l[abcikrstuvy]|m(?:[acdeghklmnopqrstuvwxyz]|il|obi|useum)|n(?:[acefgilopruz]|ame|et)|o(?:m|rg)|p(?:[aefghklmnrstwy]|ro)|qa|r[eosuw]|s[abcdeghijklmnortuvyz]|t(?:[cdfghjklmnoprtvwz]|(?:rav)?el)|u[agkmsyz]|v[aceginu]|w[fs]|y[etu]|z[amw])\b){1,2}"
+                autocomplete="off"
+                required>
+    
+                <input type="hidden" id="modal-input-desc" name="desc" value="">
+                
+                <div class="modal__subtitle">Please fill in credit information:</div>
+                <div id="card-element">
+                    
+                </div>
+    
+                
+                <div id="card-errors" role="alert"></div>
+
+                <h3 class="modal__title">Review & Confirm</h3>
+
+                <div class="modal__footer">
+                    <div class="modal__item-review">
+                        <p class="modal__item">Cost:</p>
+                        <p id="modal-price" class="modal__item-price"></p>
+                        <p class="modal__fee">Fee:</p>
+                        <p id="modal-fee" class="modal__fee-price"></p>
+                    </div>
+                    <div class="modal__total-review">
+                        <p class="modal__total-text">Total:</p>
+                        <p id="modal-total" class="modal__total-num"></p>
+                    </div>
+                </div>
+                
+                <button 
+                type="submit" 
+                value="submit" 
+                name="action" 
+                id="submit-btn" 
+                class="btn">Submit Payment</button>
+            </form>
+        </div>
+    </div>
+</div>
