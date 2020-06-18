@@ -1,2 +1,2 @@
 # Rockville Volleyball Academy
-# This website is built on html, css, javascript, and php.
+# This website is supported by Stripe's API for online payments.
